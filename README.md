@@ -164,7 +164,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/finance-backend.git
+git clone https://github.com/Sarishti845/finance-backend.git
 cd finance-backend
 ```
 
