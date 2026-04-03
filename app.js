@@ -12,13 +12,14 @@ app.get('/', (req, res) => {
   res.send('API Running');
 });
 
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/protected', require('./routes/protectedRoutes'));
+app.use('/api/transactions', require('./routes/transactionRoutes'));
+app.use('/api/users', userRoutes);
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/protected', require('./routes/protectedRoutes'));
-app.use('/api/transactions', require('./routes/transactionRoutes'));
-app.use('/api/users', userRoutes);
