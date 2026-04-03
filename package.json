@@ -1,13 +1,14 @@
 {
   "name": "finance-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Finance Backend System with RBAC and Analytics",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodejs", "express", "mongodb", "finance", "backend"],
+  "author": "Sarishti",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.3",
