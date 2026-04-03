@@ -8,7 +8,7 @@ Built using **Node.js, Express, and MongoDB**, this project demonstrates clean a
 ## 🚀 Live API
 
 - 🔗 Base URL: `[https://your-backend-url.com](https://finance-backend-dga2.onrender.com/)` 
-- ❤️ Health Check: `/health`
+- ❤️ Health Check: `[/health](https://finance-backend-dga2.onrender.com/health)`
 
 ---
 
