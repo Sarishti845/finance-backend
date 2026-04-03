@@ -19,9 +19,6 @@ app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
 app.get('/health', (req, res) => {
   res.status(200).json({
@@ -29,3 +26,8 @@ app.get('/health', (req, res) => {
     message: 'Server is healthy '
   });
 });
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
