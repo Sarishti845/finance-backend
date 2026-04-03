@@ -1,4 +1,9 @@
 # 💰 Finance Backend System (RBAC + Analytics)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Express](https://img.shields.io/badge/Express.js-Framework-black)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
+![API Status](https://img.shields.io/badge/API-Live-success)
+![License](https://img.shields.io/badge/License-ISC-blue)
 
 A robust backend system for managing financial transactions, user roles, and dashboard analytics.  
 Built using **Node.js, Express, and MongoDB**, this project demonstrates clean architecture, role-based access control, and real-world backend practices.
