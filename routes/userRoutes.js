@@ -11,7 +11,7 @@ const {
 const { verifyToken } = require('../middleware/authMiddleware');
 const authorize = require('../middleware/roleMiddleware');
 
-// Admin only routes
+
 router.post('/', verifyToken, authorize('admin'), createUser);
 router.get('/', verifyToken, authorize('admin'), getUsers);
 router.put('/:id/role', verifyToken, authorize('admin'), updateUserRole);

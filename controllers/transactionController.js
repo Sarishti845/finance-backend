@@ -6,7 +6,7 @@ exports.createTransaction = async (req, res) => {
   try {
     const { amount, type, category, notes, date } = req.body;
 
-    // 🔥 ADD THIS BLOCK
+    
     if (!amount || !type || !category) {
       return res.status(400).json({
         message: "Amount, type, and category are required"
@@ -44,7 +44,7 @@ exports.createTransaction = async (req, res) => {
   }
 };
 
-// ================= GET ALL =================
+
 exports.getTransactions = async (req, res) => {
   try {
     const { type, category, startDate, endDate } = req.query;
@@ -60,12 +60,12 @@ exports.getTransactions = async (req, res) => {
       if (endDate) filter.date.$lte = new Date(endDate);
     }
 
-    //  Pagination
+    
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 5;
     const skip = (page - 1) * limit;
 
-    //  Sorting
+    
     const sortBy = req.query.sortBy || 'date';
     const order = req.query.order === 'asc' ? 1 : -1;
 
@@ -89,8 +89,7 @@ exports.getTransactions = async (req, res) => {
 };
 
 
-// ================= UPDATE =================
-// UPDATE
+
 exports.updateTransaction = async (req, res) => {
   try {
     const { id } = req.params;
@@ -106,7 +105,7 @@ exports.updateTransaction = async (req, res) => {
       });
     }
 
-    // Update fields
+   
     const { amount, type, category, notes, date } = req.body;
 
     if (amount !== undefined && amount <= 0) {
@@ -140,7 +139,7 @@ exports.updateTransaction = async (req, res) => {
 };
 
 
-// DELETE
+
 exports.deleteTransaction = async (req, res) => {
   try {
     const { id } = req.params;
@@ -166,7 +165,7 @@ exports.deleteTransaction = async (req, res) => {
 };
 
 
-// ================= STATS =================
+
 exports.getStats = async (req, res) => {
   try {
     const transactions = await Transaction.find({ user: req.user.id });
@@ -177,11 +176,11 @@ exports.getStats = async (req, res) => {
     const categoryStats = {};
 
     transactions.forEach(t => {
-      // Income / Expense
+     
       if (t.type === 'income') income += t.amount;
       else expense += t.amount;
 
-      // Category breakdown
+     
       if (!categoryStats[t.type]) {
         categoryStats[t.type] = {};
       }

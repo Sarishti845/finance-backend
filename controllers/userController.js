@@ -1,7 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 
-// CREATE USER (Admin only)
+
 exports.createUser = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
@@ -37,7 +37,7 @@ exports.createUser = async (req, res) => {
   }
 };
 
-// GET ALL USERS (Admin only)
+
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.find().select('-password');
@@ -49,7 +49,7 @@ exports.getUsers = async (req, res) => {
   }
 };
 
-// UPDATE ROLE
+
 exports.updateUserRole = async (req, res) => {
   try {
     const { id } = req.params;
@@ -71,7 +71,7 @@ exports.updateUserRole = async (req, res) => {
   }
 };
 
-// ACTIVATE / DEACTIVATE USER
+
 exports.toggleUserStatus = async (req, res) => {
   try {
     const { id } = req.params;
