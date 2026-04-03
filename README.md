@@ -1,4 +1,4 @@
-<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/1fe94983-7a5f-42cc-b762-68211cd61579" /># 💰 Finance Backend System (RBAC + Analytics)
+# 💰 Finance Backend System (RBAC + Analytics)
 
 A robust backend system for managing financial transactions, user roles, and dashboard analytics.  
 Built using **Node.js, Express, and MongoDB**, this project demonstrates clean architecture, role-based access control, and real-world backend practices.
