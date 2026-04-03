@@ -235,12 +235,13 @@ B.Tech CSE Student | Backend Developer
 
 ---
 
-## ⭐ Highlights
+## 🚀 Why This Project Stands Out
 
-- Clean modular structure
-- Strong RBAC implementation
-- Aggregation-based analytics
-- Scalable backend design
+- Implements **Role-Based Access Control (RBAC)** correctly
+- Includes **aggregation-based analytics (monthly trends)**
+- Supports **pagination, filtering, and sorting**
+- Designed with **clean and modular architecture**
+- Deployed with a live API (production-ready mindset)
 
 ---
 
